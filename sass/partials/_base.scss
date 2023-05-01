@@ -1,0 +1,28 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+  background-color: $gray-400 !important;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+.navbar-top {
+  background-color: $gray-400;
+}
+
+.logo {
+  width: 180px;
+}
