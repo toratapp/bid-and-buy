@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Bid & buy</title>
+    <title>Sign up - Bid & buy</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -122,19 +122,27 @@
           </div>
         </nav>
       </header>
-      <section class="container login__form-section bg-white">
-        <h1>Login</h1>
+      <section class="container sign-up__form-section bg-white">
+        <h1>Sign up</h1>
         <form>
-          <div class="login__message-container"></div>
+          <div class="sign-up__message-container"></div>
           <div>
-            <label for="email" class="form-label mt-3">Email</label>
+            <label for="name" class="form-label mt-3">Name</label>
+            <input type="text" id="name" class="form-control mb-4" />
+          </div>
+          <div>
+            <label for="email" class="form-label">Email</label>
             <input type="email" id="email" class="form-control mb-4" />
           </div>
           <div>
             <label for="password" class="form-label"> Password</label>
             <input type="password" id="password" class="form-control mb-4" />
           </div>
-          <button class="btn btn-primary mt-2">Login</button>
+          <div>
+            <label for="avatar" class="form-label">Avatar (URL)</label>
+            <input type="text" id="avatar" class="form-control mb-4" />
+          </div>
+          <button class="btn btn-primary mt-2">Sign up</button>
         </form>
       </section>
     </div>
@@ -149,7 +157,7 @@
       integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
       crossorigin="anonymous"
     ></script>
-    <script src="js/login.js" type="module"></script>
+    <script src="js/signUp.js" type="module"></script>
     <script src="js/components/footer.js"></script>
   </body>
 </html>

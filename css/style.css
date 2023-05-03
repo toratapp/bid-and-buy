@@ -12136,6 +12136,30 @@ header .btn {
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.15);
 }
 
+.login__form-section {
+  margin-top: 90px;
+  padding: 30px 40px 70px 40px;
+}
+.login__form-section .form-control {
+  max-width: 500px;
+}
+
+.sign-up__form-section {
+  margin-top: 90px;
+  padding: 30px 40px 70px 40px;
+}
+.sign-up__form-section .form-control {
+  max-width: 500px;
+}
+
+.create-listing__form-section {
+  margin-top: 90px;
+  padding: 30px 40px 70px 40px;
+}
+.create-listing__form-section .form-control {
+  max-width: 500px;
+}
+
 @media (min-width: 400px) {
   .footer-part-one {
     flex-direction: row;
@@ -12145,7 +12169,7 @@ header .btn {
   }
 }
 @media (min-width: 992px) {
-  .featured-auctions-section {
+  .featured-auctions-section, .login__form-section, .sign-up__form-section, .auction__main-section, .create-listing__form-section {
     margin-top: 159px;
     padding-top: 30px;
   }
