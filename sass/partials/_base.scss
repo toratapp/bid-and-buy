@@ -30,6 +30,9 @@ img {
 
 .navbar-one-bigger-screens {
   background-color: $gray-400;
+  li {
+    margin-left: 20px;
+  }
 }
 
 .navbar-two-bigger-screens {

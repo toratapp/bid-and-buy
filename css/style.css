@@ -47,6 +47,9 @@ img {
 .navbar-one-bigger-screens {
   background-color: #F3F3F3;
 }
+.navbar-one-bigger-screens li {
+  margin-left: 20px;
+}
 
 .navbar-two-bigger-screens {
   background-color: #11224E;
