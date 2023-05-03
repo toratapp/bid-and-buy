@@ -1,7 +1,7 @@
 @import "partials/colors";
+@import "partials/typography";
 @import "partials/base";
 @import "partials/layout";
-@import "partials/typography";
 
 @import "../bootstrap-scss/mixins/banner";
 @include bsBanner("");

@@ -1,0 +1,20 @@
+$font-family-sans-serif: 'Hind', Tahoma, sans-serif;
+$headings-font-family: 'Spectral', Georgia, serif;
+$headings-font-weight: 700;
+
+nav {
+  font-family: $headings-font-family;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+}
+
+h4 {
+  text-transform: uppercase;
+  color: #000000 !important;
+}
+
+$h4-font-size: 1.2rem;

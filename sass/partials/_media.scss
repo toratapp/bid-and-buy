@@ -1,0 +1,16 @@
+@media (min-width: 400px) {
+  .footer-part-one {
+    flex-direction: row;
+  }
+
+  footer i {
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featured-auctions-section {
+    margin-top: 159px;
+    padding-top: 30px;
+  }
+}

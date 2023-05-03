@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bid & buy</title>
+    <title>Login - Bid & buy</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -120,39 +120,20 @@
           </div>
         </nav>
       </header>
-      <section class="container featured-auctions-section bg-white">
-        <h1>Featured auctions</h1>
-        <div class="container">
-          <div class="row auction-cards">
-            <div class="col auction-card">
-              <img
-                src="https://geauction.com/wp-content/uploads/2018/07/5-Auction-Tips-for-Beginners2.jpg"
-                class="img-fluid ratio-4x3"
-                alt="image"
-              />
-              <h2>Auction 1</h2>
-              <p>This is a description</p>
-            </div>
-            <div class="col auction-card">
-              <img
-                src="https://geauction.com/wp-content/uploads/2018/07/5-Auction-Tips-for-Beginners2.jpg"
-                class="img-fluid ratio-4x3"
-                alt="image"
-              />
-              <h2>Auction 1</h2>
-              <p>This is a description</p>
-            </div>
-            <div class="col auction-card">
-              <img
-                src="https://geauction.com/wp-content/uploads/2018/07/5-Auction-Tips-for-Beginners2.jpg"
-                class="img-fluid ratio-4x3"
-                alt="image"
-              />
-              <h2>Auction 1</h2>
-              <p>This is a description</p>
-            </div>
+      <section class="container login__form-section bg-white">
+        <h1>Login</h1>
+        <form>
+          <div class="login__message-container"></div>
+          <div>
+            <label for="username">Username (email)</label>
+            <input id="username" />
           </div>
-        </div>
+          <div>
+            <label for="password"> Password</label>
+            <input id="password" />
+          </div>
+          <button>Login</button>
+        </form>
       </section>
     </div>
     <footer class="mx-auto"></footer>
@@ -166,7 +147,7 @@
       integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
       crossorigin="anonymous"
     ></script>
-    <script src="js/home.js" type="module"></script>
+    <script src="js/login.js" type="module"></script>
     <script src="js/components/footer.js"></script>
   </body>
 </html>
