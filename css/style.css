@@ -36,8 +36,12 @@ img {
   flex: 1 0 auto;
 }
 
+header {
+  box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.25);
+}
+
 .navbar-small-screens {
-  background-color: #F3F3F3;
+  background-color: #F3FAFF;
 }
 
 .navbar-toggler {
@@ -45,14 +49,39 @@ img {
 }
 
 .navbar-one-bigger-screens {
-  background-color: #F3F3F3;
+  background-color: #F3FAFF;
 }
 .navbar-one-bigger-screens li {
   margin-left: 20px;
 }
+.navbar-one-bigger-screens .nav-link:hover {
+  text-decoration: underline !important;
+}
 
 .navbar-two-bigger-screens {
   background-color: #11224E;
+}
+.navbar-two-bigger-screens li {
+  font-size: 1.2rem;
+}
+.navbar-two-bigger-screens .nav-border-button {
+  box-sizing: border-box;
+  height: 49px;
+  width: auto;
+}
+.navbar-two-bigger-screens .nav-border-button:hover {
+  border: 3px solid #FFFFFF;
+  text-decoration: underline !important;
+}
+.navbar-two-bigger-screens .nav-link:hover {
+  text-decoration: underline !important;
+}
+
+nav input {
+  border: 2px solid #2C599D !important;
+  font-family: "Hind", Tahoma, sans-serif;
+  font-size: 0.95rem !important;
+  color: #000000;
 }
 
 .nav-border-button {
@@ -65,6 +94,18 @@ img {
 
 .logo {
   width: 180px;
+}
+
+.container .form-control {
+  border: 1px solid #2C599D;
+}
+
+footer {
+  border-top: 4px solid #2C599D;
+}
+
+.footer-wrapper {
+  width: 195px;
 }
 
 .footer-part-one {
@@ -12164,6 +12205,9 @@ header .btn {
 }
 
 @media (min-width: 400px) {
+  .footer-wrapper {
+    width: 320px;
+  }
   .footer-part-one {
     flex-direction: row;
   }

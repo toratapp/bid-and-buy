@@ -20,8 +20,12 @@ img {
   flex: 1 0 auto;
 }
 
+header {
+  box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.25);
+}
+
 .navbar-small-screens {
-  background-color: $gray-400;
+  background-color: $light;
 }
 
 .navbar-toggler {
@@ -29,14 +33,43 @@ img {
 }
 
 .navbar-one-bigger-screens {
-  background-color: $gray-400;
+  background-color: $light;
   li {
     margin-left: 20px;
+  }
+  .nav-link:hover {
+    text-decoration: underline !important;
   }
 }
 
 .navbar-two-bigger-screens {
   background-color: $blue-900;
+
+  li {
+    font-size: 1.2rem;
+  }
+
+  .nav-border-button {
+    box-sizing: border-box;
+    height: 49px;
+    width: auto;
+  }
+
+  .nav-border-button:hover {
+    border: 3px solid #FFFFFF;
+    text-decoration: underline !important;
+  }
+
+  .nav-link:hover {
+    text-decoration: underline !important;
+  }
+}
+
+nav input {
+  border: 2px solid $primary !important;
+  font-family: $font-family-sans-serif;
+  font-size: 0.95rem !important;
+  color: #000000;
 }
 
 .nav-border-button {
@@ -49,6 +82,20 @@ img {
 
 .logo {
   width: 180px;
+}
+
+.container {
+  .form-control {
+    border: 1px solid $primary;
+  }
+}
+
+footer {
+  border-top: 4px solid $primary;
+}
+
+.footer-wrapper {
+  width: 195px;
 }
 
 .footer-part-one {
