@@ -100,6 +100,15 @@ nav input {
   border: 1px solid #2C599D;
 }
 
+.cta {
+  background-color: #F88125;
+  border: 3px solid #11224E;
+  color: #FFFFFF;
+  font-family: "Spectral", Georgia, serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
 footer {
   border-top: 4px solid #2C599D;
 }
@@ -369,11 +378,11 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: calc(1.265rem + 0.18vw);
 }
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -8494,7 +8503,7 @@ textarea.form-control-lg {
 }
 
 .fs-2 {
-  font-size: calc(1.325rem + 0.9vw) !important;
+  font-size: calc(1.265rem + 0.18vw) !important;
 }
 
 .fs-3 {
@@ -12117,7 +12126,7 @@ textarea.form-control-lg {
     font-size: 2.5rem !important;
   }
   .fs-2 {
-    font-size: 2rem !important;
+    font-size: 1.4rem !important;
   }
   .fs-3 {
     font-size: 1.75rem !important;
@@ -12204,6 +12213,51 @@ header .btn {
   max-width: 500px;
 }
 
+.auction__main-section {
+  margin-top: 90px;
+  padding: 30px 40px 70px 40px;
+}
+
+.auction__thumbnails {
+  margin-top: 25px;
+  gap: 25px;
+}
+
+.auction__details-section {
+  margin-top: 30px;
+}
+
+.auction__date-p {
+  margin-bottom: 30px;
+}
+
+.auction__bid-input-section {
+  margin-bottom: 30px;
+}
+.auction__bid-input-section label {
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin: 5px 10px 0 0;
+}
+.auction__bid-input-section .form-control {
+  border-radius: 0;
+}
+.auction__bid-input-section .cta {
+  width: 210px;
+  padding: 5px 0;
+  margin-left: 15px;
+}
+
+.auction__bids {
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 30px;
+  max-width: 450px;
+}
+
+.auction__description-section p {
+  padding-bottom: 30px;
+}
+
 @media (min-width: 400px) {
   .footer-wrapper {
     width: 320px;
@@ -12219,5 +12273,19 @@ header .btn {
   .featured-auctions-section, .login__form-section, .sign-up__form-section, .auction__main-section, .create-listing__form-section {
     margin-top: 159px;
     padding-top: 30px;
+  }
+  .auction__main-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  .auction__details-section {
+    margin-top: 0;
+  }
+  .auction__date-p {
+    margin-bottom: 40px;
+  }
+  .auction__bid-input-section {
+    margin-bottom: 40px;
   }
 }/*# sourceMappingURL=style.css.map */

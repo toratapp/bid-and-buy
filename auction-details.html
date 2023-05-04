@@ -124,7 +124,7 @@
       </header>
       <section class="container auction__main-section bg-white">
         <div class="auction__heading-and-images">
-          <h1>Auction</h1>
+          <h1>Auction title</h1>
           <div class="auction__main-image">
             <img
               src="https://geauction.com/wp-content/uploads/2018/07/5-Auction-Tips-for-Beginners2.jpg"
@@ -132,7 +132,7 @@
               alt="image"
             />
           </div>
-          <div class="auction__thumbnails">
+          <div class="auction__thumbnails d-flex">
             <div>
               <img
                 src="https://geauction.com/wp-content/uploads/2018/07/5-Auction-Tips-for-Beginners2.jpg"
@@ -156,8 +156,46 @@
             </div>
           </div>
         </div>
-        <div class=""></div>
-        <div class=""></div>
+        <div class="auction__details-section">
+          <h2>Auction ends at</h2>
+          <p class="auction__date-p">2023-09-01 12:00</p>
+          <h2>Place a bid</h2>
+          <form class="auction__bid-input-section d-flex">
+            <label for="bid-amount" class="auction__bid-label">&dollar;</label>
+            <input
+              type="text"
+              id="bid-amount"
+              class="form-control"
+              required
+              min="1"
+              placeholder="Amount"
+            />
+            <button class="cta">Bid now</button>
+          </form>
+          <h2>Bids on this auction</h2>
+          <div class="auction__bids d-grid mt-3">
+            <p>Name:</p>
+            <p class="fw-bold">Amount</p>
+            <p>Name:</p>
+            <p class="fw-bold">Amount</p>
+            <p>Name:</p>
+            <p class="fw-bold">Amount</p>
+          </div>
+        </div>
+        <div class="auction__description-section">
+          <h2>Description</h2>
+          <p>
+            Here is a paragraph of text about the auction. Bissiti ossuntio
+            molut molores nulpa in eictisti que is cupit odi ut que por autem
+            estiate mperum sequi sunt labores equunt landion sendamet am quatus
+            resti incia vendigent eosae occus, conet es cullabo. At ea volorum
+            nem siti optatat ecatia nonse sit quos aut pro ipsunt que peles et
+            quam qui a dolectus restrum fuga. Id ut explandame volupiet ut
+            platest, te suntiur mo cone dolecti ut fugitior aut aperior rovidel
+            esendit, cullora voluptatus solut ma sapieni musam, quae pe nim
+            harcimu stiust alitibe ratatur.
+          </p>
+        </div>
       </section>
     </div>
     <footer></footer>

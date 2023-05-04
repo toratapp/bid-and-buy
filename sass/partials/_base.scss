@@ -90,6 +90,15 @@ nav input {
   }
 }
 
+.cta {
+  background-color: $orange-600;
+  border: 3px solid $blue-900;
+  color: #FFFFFF;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  font-size: 1.3rem;
+}
+
 footer {
   border-top: 4px solid $primary;
 }

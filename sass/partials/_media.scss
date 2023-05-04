@@ -17,4 +17,22 @@
     margin-top: 159px;
     padding-top: 30px;
   }
+
+  .auction__main-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .auction__details-section {
+    margin-top: 0;
+  }
+
+  .auction__date-p {
+    margin-bottom: 40px;
+  }
+
+  .auction__bid-input-section {
+    margin-bottom: 40px;
+  }
 }

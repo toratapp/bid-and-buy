@@ -16,7 +16,7 @@ footer.innerHTML += ` <div class="footer-wrapper mx-auto">
                           </div>
                         </div>
                         <div class="footer-part-two text-center mt-3">
-                          <p>&copy Copyright 2023 - Bid & buy co</p>
+                          <p>&copy; Copyright 2023 - Bid & buy co</p>
                         </div>
                       </div>`
                     
