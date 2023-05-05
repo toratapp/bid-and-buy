@@ -124,29 +124,38 @@
       </header>
       <section class="container sign-up__form-section bg-white">
         <h1>Sign up</h1>
-        <form>
+        <form class="sign-up__form">
           <div class="sign-up__message-container"></div>
           <div>
-            <label for="name" class="form-label mt-3">Name</label>
+            <label for="sign-up-name" class="form-label mt-3"
+              >Name (no spaces or special characters except for "_")</label
+            >
             <input
               type="text"
-              id="name"
+              id="sign-up-name"
               class="form-control mb-4"
               required
               minlength="2"
             />
           </div>
           <div>
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" class="form-control mb-4" required />
+            <label for="sign-up-email" class="form-label"
+              >Email (must contain "stud.noroff.no" or "noroff.no")</label
+            >
+            <input
+              type="email"
+              id="sign-up-email"
+              class="form-control mb-4"
+              required
+            />
           </div>
           <div>
-            <label for="password" class="form-label"
+            <label for="sign-up-password" class="form-label"
               >Password (at least 8 characters)</label
             >
             <input
               type="password"
-              id="password"
+              id="sign-up-password"
               class="form-control mb-4"
               required
               minlength="8"

@@ -109,6 +109,11 @@ nav input {
   font-size: 1.3rem;
 }
 
+.error {
+  color: #D82C00;
+  margin: 5px 0;
+}
+
 footer {
   border-top: 4px solid #2C599D;
 }
@@ -12177,6 +12182,7 @@ header .btn {
 .featured-auctions-section {
   margin-top: 90px;
   padding: 30px 40px 70px 40px;
+  min-height: 85vh;
 }
 
 .auction-cards {
@@ -12184,6 +12190,7 @@ header .btn {
 }
 
 .auction-card {
+  padding-top: 10px;
   border-bottom: 2px solid #FFA64D;
   border-right: 2px solid #FFA64D;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.15);
@@ -12192,6 +12199,7 @@ header .btn {
 .login__form-section {
   margin-top: 90px;
   padding: 30px 40px 70px 40px;
+  min-height: 85vh;
 }
 .login__form-section .form-control {
   max-width: 500px;
@@ -12200,6 +12208,7 @@ header .btn {
 .sign-up__form-section {
   margin-top: 90px;
   padding: 30px 40px 70px 40px;
+  min-height: 85vh;
 }
 .sign-up__form-section .form-control {
   max-width: 500px;
@@ -12208,6 +12217,7 @@ header .btn {
 .create-listing__form-section {
   margin-top: 90px;
   padding: 30px 40px 70px 40px;
+  min-height: 85vh;
 }
 .create-listing__form-section .form-control {
   max-width: 500px;
