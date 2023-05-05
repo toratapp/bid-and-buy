@@ -56,7 +56,7 @@ header {
   }
 
   .nav-border-button:hover {
-    border: 3px solid #FFFFFF;
+    border: 4px solid #FFFFFF;
     text-decoration: underline !important;
   }
 
@@ -76,12 +76,21 @@ nav input {
   border: 2px solid #FFFFFF;
 }
 
+.active {
+  font-weight: 700 !important;
+  border: 4px solid #FFFFFF !important;
+}
+
 .navbar-collapse {
   background-color: $blue-900;
 }
 
 .logo {
   width: 180px;
+}
+
+.nav__username-and-credits {
+  gap: 30px;
 }
 
 .container {

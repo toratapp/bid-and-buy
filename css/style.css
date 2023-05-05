@@ -70,7 +70,7 @@ header {
   width: auto;
 }
 .navbar-two-bigger-screens .nav-border-button:hover {
-  border: 3px solid #FFFFFF;
+  border: 4px solid #FFFFFF;
   text-decoration: underline !important;
 }
 .navbar-two-bigger-screens .nav-link:hover {
@@ -88,12 +88,21 @@ nav input {
   border: 2px solid #FFFFFF;
 }
 
+.active {
+  font-weight: 700 !important;
+  border: 4px solid #FFFFFF !important;
+}
+
 .navbar-collapse {
   background-color: #11224E;
 }
 
 .logo {
   width: 180px;
+}
+
+.nav__username-and-credits {
+  gap: 30px;
 }
 
 .container .form-control {
@@ -12280,6 +12289,9 @@ header .btn {
   }
 }
 @media (min-width: 992px) {
+  .nav__username-and-credits {
+    color: #FFFFFF;
+  }
   .featured-auctions-section, .login__form-section, .sign-up__form-section, .auction__main-section, .create-listing__form-section {
     margin-top: 159px;
     padding-top: 30px;

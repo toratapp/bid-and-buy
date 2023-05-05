@@ -1,6 +1,9 @@
 import displayMessage from "./components/displayMessage.js";
 import { saveToken, saveUser } from "./utils/storage.js";
 import { corsEnabledUrl } from "./constants/api.js";
+import createMenu from "./components/createMenu.js";
+
+createMenu();
 
 const loginForm = document.querySelector(".login__form");
 const loginEmail = document.querySelector("#login-email");
@@ -33,7 +36,8 @@ async function doLogin(loginEmail, loginPassword) {
     method: "POST",
     body: loginData,
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      "X-Requested-With": "",
     }
   };
 
@@ -41,14 +45,15 @@ async function doLogin(loginEmail, loginPassword) {
     const loginResponse = await fetch(loginUrl, loginOptions);
     const loginJson = await loginResponse.json();
 
-    if(loginJson.user) {
-      saveToken(json.accessToken);
-      saveUser(json.name);
+    if(loginJson.name) {
+      saveToken(loginJson.accessToken);
+      saveUser(loginJson.name);
 
       location.href = "/";
     }
 
     if(loginJson.error) {
+      console.log(error);
       return displayMessage("error", "Incorrect email og password", ".login__message-container");
     }
   }

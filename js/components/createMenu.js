@@ -1,4 +1,19 @@
-export default function createMenu() {
+import { getCreditAmount } from "../utils/getCreditAmount.js";
+import { getUserName } from "../utils/storage.js";
+
+export default async function createMenu() {
+  const { pathname } = document.location;
+
+  console.log(pathname);
+
+  const username = getUserName();
+  const creditAmount = await getCreditAmount();
+
+  let accountInfo = ` <div class="nav__username-and-credits d-flex">
+                        <p>${username}</p>
+                        <p>${creditAmount}</p>
+                      </div>`;
+
   const menuContainer = document.querySelector(".menu-container");
 
   menuContainer.innerHTML = ` <nav class="navbar navbar-expand-lg navbar-small-screens d-lg-none">
@@ -33,13 +48,13 @@ export default function createMenu() {
                                       </button>
                                     </form>
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 pt-3">
-                                      <li class="nav-item nav-border-button p-2 mb-3">
+                                      <li class="${pathname.toString().includes("auction-details") ? "nav-item nav-border-button p-2 mb-3 active" : "nav-item nav-border-button p-2 mb-3"}">
                                         <a class="nav-link text-white" href="index.html">Auctions</a>
                                       </li>
                                       <li class="nav-item nav-border-button p-2 mb-3">
                                         <a class="nav-link text-white" href="#">Buy it now</a>
                                       </li>
-                                      <li class="nav-item nav-border-button p-2 mb-3">
+                                      <li class="${pathname === "/create-listing.html" ? "nav-item nav-border-button p-2 mb-3 active" : "nav-item nav-border-button p-2 mb-3"}">
                                         <a class="nav-link text-white" href="create-listing.html"
                                           >Sell</a
                                         >
@@ -53,6 +68,7 @@ export default function createMenu() {
                                     </ul>
                                   </div>
                                 </div>
+                                ${accountInfo}
                               </nav>
                               <nav
                                 class="navbar navbar-expand-lg navbar-one-bigger-screens d-none d-lg-block"
@@ -87,18 +103,19 @@ export default function createMenu() {
                               >
                                 <div class="container">
                                   <ul class="navbar-nav me-auto mb-lg-0">
-                                    <li class="nav-item nav-border-button px-2 me-5 my-1">
+                                    <li class="${pathname.toString().includes("auction-details") ? "nav-item nav-border-button px-2 me-5 my-1 active" : "nav-item nav-border-button px-2 me-5 my-1"}">
                                       <a class="nav-link text-white" href="index.html">Auctions</a>
                                     </li>
                                     <li class="nav-item nav-border-button px-2 me-5 my-1">
                                       <a class="nav-link text-white" href="#">Buy it now</a>
                                     </li>
-                                    <li class="nav-item nav-border-button px-2 my-1">
+                                    <li class="${pathname === "/create-listing.html" ? "nav-item nav-border-button px-2 my-1 active" : "nav-item nav-border-button px-2 my-1"}">
                                       <a class="nav-link text-white" href="create-listing.html"
                                         >Sell</a
                                       >
                                     </li>
                                   </ul>
+                                  ${accountInfo}
                                 </div>
                               </nav>`
 }

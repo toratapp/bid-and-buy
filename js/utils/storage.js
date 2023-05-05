@@ -1,5 +1,6 @@
 const accessTokenKey = "accessToken";
 const userNameKey = "name";
+const creditsKey = "credits";
 
 export function saveToken(accessToken) {
   saveInStorage(accessTokenKey, accessToken);
