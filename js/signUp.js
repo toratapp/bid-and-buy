@@ -1,5 +1,8 @@
 import displayMessage from "./components/displayMessage.js";
 import { corsEnabledUrl } from "./constants/api.js";
+import createMenu from "./components/createMenu.js";
+
+createMenu();
 
 const signUpForm = document.querySelector(".sign-up__form");
 const signUpName = document.querySelector("#sign-up-name");
