@@ -126,6 +126,33 @@ nav input {
   margin: 0 0 2px 0;
 }
 
+#account-info-container i {
+  color: #2C599D;
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+.my-account-link:hover ~ .my-account-user-icon {
+  color: #000000 !important;
+}
+
+.my-account-user-icon:hover {
+  color: #000000 !important;
+}
+
+.my-account-link {
+  text-decoration: none;
+  gap: 5px;
+}
+
+.my-account-link p {
+  color: #000000;
+}
+
+.my-account-link p:hover {
+  text-decoration: underline;
+}
+
 #logout-link {
   cursor: pointer;
 }
@@ -145,6 +172,11 @@ nav input {
 
 .error {
   color: #D82C00;
+  margin: 5px 0;
+}
+
+.success {
+  color: #017B32;
   margin: 5px 0;
 }
 
@@ -12257,6 +12289,11 @@ header .btn {
   max-width: 500px;
 }
 
+.create-listing__asterisk-p {
+  margin: 25px 0 10px 0;
+  font-size: 0.9rem;
+}
+
 .auction__main-section {
   margin-top: 90px;
   padding: 30px 40px 70px 40px;
@@ -12302,6 +12339,15 @@ header .btn {
   padding-bottom: 30px;
 }
 
+.my-account__form-section {
+  margin-top: 90px;
+  padding: 30px 40px 70px 40px;
+  min-height: 85vh;
+}
+.my-account__form-section .form-control {
+  max-width: 500px;
+}
+
 @media (min-width: 400px) {
   .footer-wrapper {
     width: 320px;
@@ -12323,7 +12369,7 @@ header .btn {
   #account-info-container {
     top: 175px;
   }
-  .featured-auctions-section, .login__form-section, .sign-up__form-section, .auction__main-section, .create-listing__form-section {
+  .featured-auctions-section, .login__form-section, .sign-up__form-section, .auction__main-section, .create-listing__form-section, .my-account__form-section {
     margin-top: 159px;
     padding-top: 30px;
   }

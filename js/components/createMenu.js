@@ -144,7 +144,7 @@ export default async function createMenu() {
     const creditAmount = await getCreditAmount();
   
     accountInfoContainer.innerHTML = `<div class="header__username-and-credits">
-                                        <p>Hi ${userName}!</p>
+                                        <a href="my-account.html" class="my-account-link d-flex"><i class="fa-solid fa-user my-account-user-icon"></i><p>${userName}</p></a>
                                         <p>Your credits: ${creditAmount}</p>
                                         <a id="logout-link" class="text-link">Logout</a>
                                       </div>`;

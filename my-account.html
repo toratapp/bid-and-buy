@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create listing</title>
+    <title>My account</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,47 +24,24 @@
         <div class="menu-container"></div>
       </header>
       <div id="account-info-container"></div>
-      <section class="container create-listing__form-section bg-white">
-        <h1>Create auction</h1>
-        <p class="create-listing__asterisk-p">
-          Fields with an asterisk * are required
-        </p>
-        <form class="create-listing-form">
+      <section class="container my-account__form-section bg-white">
+        <h1>My account</h1>
+        <form class="update-avatar-form">
           <div>
-            <label for="title" class="form-label mt-3">Title*</label>
-            <input type="text" id="title" class="form-control mb-4" required />
-          </div>
-          <div>
-            <label for="description" class="form-label">Description</label>
-            <textarea
-              id="description"
-              name="description"
-              rows="5"
-              cols="33"
-              class="form-control mb-4"
-              required
-            ></textarea>
-          </div>
-          <div>
-            <label for="tags" class="form-label">Tags</label>
-            <input type="text" id="tags" class="form-control mb-4" />
-          </div>
-          <div>
-            <label for="media" class="form-label">Media (URL)</label>
-            <input type="text" id="media" class="form-control mb-4" />
-          </div>
-          <div>
-            <label for="ends-at" class="form-label">Ends at*</label>
+            <label for="updateAvatar" class="form-label mt-3"
+              >Update avatar (URL)</label
+            >
             <input
-              type="datetime-local"
-              id="ends-at"
+              type="text"
+              id="updateAvatar"
               class="form-control mb-4"
               required
             />
           </div>
-          <div class="create-listing__message-container"></div>
-          <button class="btn btn-primary mt-2">Create auction</button>
+          <div class="avatar__message-container"></div>
+          <button class="btn btn-primary mt-2">Update avatar</button>
         </form>
+        <div class="current-avatar-container"></div>
       </section>
     </div>
     <footer></footer>
@@ -78,7 +55,7 @@
       integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
       crossorigin="anonymous"
     ></script>
-    <script src="js/createListing.js" type="module"></script>
+    <script src="js/myAccount.js" type="module"></script>
     <script src="js/components/footer.js"></script>
   </body>
 </html>

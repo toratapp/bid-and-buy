@@ -114,6 +114,33 @@ nav input {
   margin: 0 0 2px 0;
 }
 
+#account-info-container i {
+  color: $primary;
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+.my-account-link:hover ~ .my-account-user-icon {
+  color: #000000 !important;
+}
+
+.my-account-user-icon:hover {
+  color: #000000 !important;
+}
+
+.my-account-link {
+  text-decoration: none;
+  gap: 5px;
+}
+
+.my-account-link p {
+  color: #000000;
+}
+
+.my-account-link p:hover {
+  text-decoration: underline;
+}
+
 #logout-link {
   cursor: pointer;
 }
@@ -135,6 +162,11 @@ nav input {
 
 .error {
   color: #D82C00;
+  margin: 5px 0;
+}
+
+.success {
+  color: #017B32;
   margin: 5px 0;
 }
 
