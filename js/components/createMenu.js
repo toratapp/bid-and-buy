@@ -1,18 +1,9 @@
-import { getCreditAmount } from "../utils/getCreditAmount.js";
-import { getUserName } from "../utils/storage.js";
+import { corsEnabledUrl } from "../constants/api.js";
+import { getToken, getUserName } from "../utils/storage.js";
+import logoutLink from "./logoutLink.js";
 
 export default async function createMenu() {
   const { pathname } = document.location;
-
-  console.log(pathname);
-
-  const username = getUserName();
-  const creditAmount = await getCreditAmount();
-
-  let accountInfo = ` <div class="nav__username-and-credits d-flex">
-                        <p>${username}</p>
-                        <p>${creditAmount}</p>
-                      </div>`;
 
   const menuContainer = document.querySelector(".menu-container");
 
@@ -68,7 +59,6 @@ export default async function createMenu() {
                                     </ul>
                                   </div>
                                 </div>
-                                ${accountInfo}
                               </nav>
                               <nav
                                 class="navbar navbar-expand-lg navbar-one-bigger-screens d-none d-lg-block"
@@ -115,7 +105,48 @@ export default async function createMenu() {
                                       >
                                     </li>
                                   </ul>
-                                  ${accountInfo}
                                 </div>
-                              </nav>`
+                              </nav>`;
+
+  async function getCreditAmount() {
+    const userName = getUserName();
+  
+    if(!userName || userName === [] || userName.length === 0) {
+      return null;
+    } else {
+      const token = getToken();
+      const creditAmountUrl = corsEnabledUrl + "profiles/" + userName + "/credits";
+      const creditsOptions = {
+        headers: {
+          "Authorization": `Bearer ${token}`,
+          "X-Requested-With": "",
+        }
+      };
+
+      try {
+        const creditsResponse = await fetch(creditAmountUrl, creditsOptions);
+        const creditsJson = await creditsResponse.json();
+        return creditsJson.credits;
+      }
+      catch(error) {
+        console.log(error);
+      }
+    }
+  }
+
+  const userName = getUserName();
+  const accountInfoContainer = document.querySelector("#account-info-container");
+
+  if(!userName || userName === [] || userName.length === 0) {
+    return accountInfoContainer.style.display = "none";
+  } else {
+    const creditAmount = await getCreditAmount();
+  
+    accountInfoContainer.innerHTML = `<div class="header__username-and-credits">
+                                        <p>Hi ${userName}!</p>
+                                        <p>Your credits: ${creditAmount}</p>
+                                        <a id="logout-link" class="text-link">Logout</a>
+                                      </div>`;
+  logoutLink();
+  }
 }

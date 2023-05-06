@@ -2,10 +2,15 @@ import { corsEnabledUrl } from "../constants/api.js";
 import { getToken, getUserName } from "./storage.js";
 
 export async function getCreditAmount() {
-  const username = getUserName();
+  const userName = getUserName();
+
+  if(!userName) {
+    return null;
+  }
+
   const token = getToken();
 
-  const creditAmountUrl = corsEnabledUrl + "profiles/" + username + "/credits";
+  const creditAmountUrl = corsEnabledUrl + "profiles/" + userName + "/credits";
 
   const creditsOptions = {
     headers: {

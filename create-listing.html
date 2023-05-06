@@ -23,13 +23,14 @@
       <header class="fixed-top">
         <div class="menu-container"></div>
       </header>
+      <div id="account-info-container"></div>
       <section class="container create-listing__form-section bg-white">
         <h1>Create auction</h1>
         <form>
           <div class="create-listing__message-container"></div>
           <div>
             <label for="title" class="form-label mt-3">Title</label>
-            <input type="text" id="title" class="form-control mb-4" />
+            <input type="text" id="title" class="form-control mb-4" required />
           </div>
           <div>
             <label for="description" class="form-label">Description</label>
@@ -39,6 +40,7 @@
               rows="5"
               cols="33"
               class="form-control mb-4"
+              required
             ></textarea>
           </div>
           <div>
@@ -47,11 +49,16 @@
           </div>
           <div>
             <label for="media" class="form-label">Media (URL)</label>
-            <input type="text" id="media" class="form-control mb-4" />
+            <input type="text" id="media" class="form-control mb-4" required />
           </div>
           <div>
             <label for="title" class="form-label">Ends at</label>
-            <input type="datetime-local" id="title" class="form-control mb-4" />
+            <input
+              type="datetime-local"
+              id="title"
+              class="form-control mb-4"
+              required
+            />
           </div>
           <button class="btn btn-primary mt-2">Login</button>
         </form>

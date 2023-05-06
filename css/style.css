@@ -26,17 +26,27 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 img {
   width: 100%;
 }
 
+.text-link {
+  color: #2C599D;
+  font-weight: 700;
+}
+
+.text-link:hover {
+  color: #000000;
+}
+
 .wrapper {
   flex: 1 0 auto;
 }
 
-header {
+.navbar-small-screens, .navbar-two-bigger-screens {
   box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.25);
 }
 
@@ -101,8 +111,21 @@ nav input {
   width: 180px;
 }
 
-.nav__username-and-credits {
-  gap: 30px;
+#account-info-container {
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2000;
+  background-color: #ffffff;
+}
+
+#account-info-container p {
+  margin: 0 0 2px 0;
+}
+
+#logout-link {
+  cursor: pointer;
 }
 
 .container .form-control {
@@ -12288,9 +12311,18 @@ header .btn {
     margin-bottom: 8px;
   }
 }
+@media (min-width: 576px) {
+  #account-info-container {
+    top: 105px;
+    bottom: auto;
+  }
+}
 @media (min-width: 992px) {
-  .nav__username-and-credits {
-    color: #FFFFFF;
+  #account-info-container {
+    padding: 15px 15px;
+    position: absolute;
+    top: 175px;
+    right: 0;
   }
   .featured-auctions-section, .login__form-section, .sign-up__form-section, .auction__main-section, .create-listing__form-section {
     margin-top: 159px;

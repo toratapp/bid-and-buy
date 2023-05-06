@@ -10,17 +10,27 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 img {
   width: 100%;
 }
 
+.text-link {
+  color: $primary;
+  font-weight: 700;
+}
+
+.text-link:hover {
+  color: #000000;
+}
+
 .wrapper {
   flex: 1 0 auto;
 }
 
-header {
+.navbar-small-screens, .navbar-two-bigger-screens {
   box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.25);
 }
 
@@ -89,8 +99,21 @@ nav input {
   width: 180px;
 }
 
-.nav__username-and-credits {
-  gap: 30px;
+#account-info-container {
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2000;
+  background-color: #ffffff;
+}
+
+#account-info-container p {
+  margin: 0 0 2px 0;
+}
+
+#logout-link {
+  cursor: pointer;
 }
 
 .container {

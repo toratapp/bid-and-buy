@@ -19,9 +19,13 @@ export function getUserName() {
 
   if (name) {
       return name;
+  } else {
+    return null;
   }
+}
 
-  return null;
+export function clearStorage() {
+  localStorage.clear();
 }
 
 function saveInStorage(key, value) {
