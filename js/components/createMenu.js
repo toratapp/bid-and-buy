@@ -110,9 +110,10 @@ export default async function createMenu() {
 
   async function getCreditAmount() {
     const userName = getUserName();
+    const accountInfoContainer = document.querySelector("#account-info-container");
   
     if(!userName || userName === [] || userName.length === 0) {
-      return null;
+      return accountInfoContainer.style.display = "none";
     } else {
       const token = getToken();
       const creditAmountUrl = corsEnabledUrl + "profiles/" + userName + "/credits";
