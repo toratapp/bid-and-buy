@@ -100,12 +100,14 @@ nav input {
 }
 
 #account-info-container {
-  padding: 15px;
-  position: absolute;
+  padding: 12px;
+  position: fixed;
   bottom: 0;
   right: 0;
   z-index: 2000;
   background-color: #ffffff;
+  margin-bottom: 40px;
+  font-size: 0.9rem;
 }
 
 #account-info-container p {

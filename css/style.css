@@ -112,12 +112,14 @@ nav input {
 }
 
 #account-info-container {
-  padding: 15px;
-  position: absolute;
+  padding: 12px;
+  position: fixed;
   bottom: 0;
   right: 0;
   z-index: 2000;
   background-color: #ffffff;
+  margin-bottom: 40px;
+  font-size: 0.9rem;
 }
 
 #account-info-container p {
@@ -12319,10 +12321,7 @@ header .btn {
 }
 @media (min-width: 992px) {
   #account-info-container {
-    padding: 15px 15px;
-    position: absolute;
     top: 175px;
-    right: 0;
   }
   .featured-auctions-section, .login__form-section, .sign-up__form-section, .auction__main-section, .create-listing__form-section {
     margin-top: 159px;
