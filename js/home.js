@@ -1,4 +1,4 @@
-import { baseUrl, corsEnabledUrl } from "./constants/api.js";
+import { baseUrl } from "./constants/api.js";
 import displayMessage from "./components/displayMessage.js";
 import createMenu from "./components/createMenu.js";
 
@@ -42,3 +42,53 @@ async function getFeaturedAuctions() {
 }
 
 getFeaturedAuctions();
+
+const searchFormBiggerScreens = document.querySelector(".search-form-bigger-screens");
+const searchInput = document.querySelector(".searchInput");
+
+searchFormBiggerScreens.addEventListener("submit", submitSearchForm);
+
+function submitSearchForm(event) {
+  event.preventDefault();
+
+  const searchValue = searchInput.value.trim();
+
+  doSearch(searchValue);
+}
+
+async function doSearch(searchInput) {
+  const searchUrl = baseUrl + "listings?_active=true&_tag=" + searchInput;
+
+  try {
+    const searchResponse = await fetch(searchUrl);
+    const searchJson = await searchResponse.json();
+    const h1 = document.querySelector("h1");
+
+    h1.innerHTML = "Search results";
+
+    auctionsContainer.innerHTML = "";
+
+    for (let i = 0; i < searchJson.length; i++) {
+      const { id, title, description, media } = searchJson[i];
+
+      if (!media[0]) {
+        media[0] = "https://teidsvag.com/wine-14.jpg";
+      }
+
+      auctionsContainer.innerHTML += `<a href="auction-details.html?id=${id}">
+                                        <div class="auction-card">
+                                          <img
+                                            src="${media[0]}"
+                                            class="img-fluid"
+                                            alt="image"
+                                          />
+                                          <h2 class="mt-3">${title}</h2>
+                                          <p>${description}</p>
+                                        </div>
+                                      </a>`;
+    }
+  }
+  catch(error) {
+    return displayMessage("error", "An error occured", ".auction-cards");
+  }
+}

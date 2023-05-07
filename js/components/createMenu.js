@@ -67,9 +67,9 @@ export default async function createMenu() {
                                   <a class="navbar-brand logo" href="index.html">
                                     <img src="images/logo.svg" alt="Bid and buy logo" />
                                   </a>
-                                  <form class="d-flex" role="search">
+                                  <form class="search-form-bigger-screens d-flex" role="search">
                                     <input
-                                      class="form-control"
+                                      class="form-control searchInput"
                                       type="search"
                                       placeholder="Search"
                                       aria-label="Search"

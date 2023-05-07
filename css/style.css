@@ -207,6 +207,44 @@ nav input {
     transform: rotate(1turn);
   }
 }
+.search-results-h1 {
+  margin-top: 120px;
+}
+
+.search-results-container {
+  padding: 0 40px 70px 40px;
+}
+
+.auction-cards {
+  gap: 50px;
+  grid-template-columns: 1fr;
+}
+
+.auction-cards a {
+  text-decoration: none;
+}
+
+.auction-card {
+  padding: 10px 10px 0 10px;
+  border-bottom: 2px solid #FFA64D;
+  border-right: 2px solid #FFA64D;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.15);
+}
+
+.auction-card h2:hover, .auction-card .h2:hover {
+  text-decoration: underline;
+}
+
+.auction-card p {
+  color: #000000 !important;
+}
+
+.auction-card img {
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 footer {
   border-top: 4px solid #2C599D;
 }
@@ -12278,36 +12316,6 @@ header .btn {
   min-height: 85vh;
 }
 
-.auction-cards {
-  gap: 50px;
-  grid-template-columns: 1fr;
-}
-
-.auction-cards a {
-  text-decoration: none;
-}
-
-.auction-card {
-  padding: 10px 10px 0 10px;
-  border-bottom: 2px solid #FFA64D;
-  border-right: 2px solid #FFA64D;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.15);
-}
-
-.auction-card h2:hover, .auction-card .h2:hover {
-  text-decoration: underline;
-}
-
-.auction-card p {
-  color: #000000 !important;
-}
-
-.auction-card img {
-  aspect-ratio: 4/3;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .login__form-section {
   margin-top: 90px;
   padding: 30px 40px 70px 40px;
@@ -12434,7 +12442,7 @@ header .btn {
   #account-info-container {
     top: 175px;
   }
-  .featured-auctions-section, .login__form-section, .sign-up__form-section, .auction__main-section, .create-listing__form-section, .my-account__form-section {
+  .featured-auctions-section, .login__form-section, .sign-up__form-section, .auction__main-section, .create-listing__form-section, .my-account__form-section, .auction-details__search-results-container {
     margin-top: 159px;
     padding-top: 30px;
   }
@@ -12445,6 +12453,10 @@ header .btn {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+  }
+  .auction-details-h1 {
+    grid-column: -1/1;
+    margin-bottom: -50px;
   }
   .auction__details-section {
     margin-top: 11px;

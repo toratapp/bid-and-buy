@@ -13,7 +13,7 @@ if (!id) {
 }
 const auctionDetailsUrl = baseUrl + "listings/" + id + "?_bids=true";
 const loader = document.querySelector(".loader");
-const h1 = document.querySelector("h1");
+const h1 = document.querySelector(".auction-details-h1");
 const mainImageContainer = document.querySelector(".auction__main-image");
 const auctionThumbnailsContainer = document.querySelector(".auction__thumbnails");
 const endsAtContainer = document.querySelector(".auction__date-p");
@@ -47,31 +47,26 @@ async function getAuction() {
       media[0] = "https://teidsvag.com/wine-14.jpg";
     }
     if (!media[1] || media[1] === "undefined") {
-      media[1] = "https://teidsvag.com/wine-14.jpg";
+      media[1] = "";
     }
     if (!media[2] || media[2] === "undefined") {
-      media[2] = "https://teidsvag.com/wine-14.jpg";
-    }
-    if (!media[3] || media[3] === "undefined") {
-      media[3] = "https://teidsvag.com/wine-14.jpg";
+      media[2] = "";
     }
     mainImageContainer.innerHTML = `<img src="${media[0]}" class="img-fluid mt-2" alt="image" />`;
     auctionThumbnailsContainer.innerHTML = `  <div class="auction__thumbnail-1">
                                                 <img
-                                                  src="${media[1]}"
+                                                  src="${media[0]}"
                                                   alt="image"
                                                 />
                                               </div>
                                               <div class="auction__thumbnail-2">
                                                 <img
-                                                  src="${media[2]}"
-                                                  alt="image"
+                                                  src="${media[1]}"
                                                 />
                                               </div>
                                               <div class="auction__thumbnail-3">
                                                 <img
-                                                  src="${media[3]}"
-                                                  alt="image"
+                                                  src="${media[2]}"
                                                 />
                                               </div>`;
     endsAtContainer.innerHTML = dateEndsAt + "&nbsp;" + timeEndsAt;
