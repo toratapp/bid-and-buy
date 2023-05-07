@@ -23,7 +23,7 @@ async function getFeaturedAuctions() {
         media[0] = "https://teidsvag.com/wine-14.jpg";
       }
 
-      auctionsContainer.innerHTML += `<a href="auction-details.html/${id}">
+      auctionsContainer.innerHTML += `<a href="auction-details.html?id=${id}">
                                         <div class="auction-card">
                                           <img
                                             src="${media[0]}"
