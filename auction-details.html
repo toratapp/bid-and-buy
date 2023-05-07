@@ -33,31 +33,27 @@
         </div>
         <div class="auction__details-section">
           <h2>Auction ends at</h2>
-          <p class="auction__date-p">2023-09-01 12:00</p>
+          <p class="auction__date-p"></p>
           <h2>Place a bid</h2>
           <form class="auction__bid-input-section d-flex">
             <label for="bid-amount" class="auction__bid-label">&dollar;</label>
             <input
-              type="text"
+              type="number"
               id="bid-amount"
               class="form-control"
               required
               min="1"
               placeholder="Amount"
             />
+            <div class="bid__message-container"></div>
             <button class="cta">Bid now</button>
           </form>
           <h2>Bids on this auction</h2>
-          <div class="auction__bids d-grid mt-3">
-            <p>Name:</p>
-            <p class="fw-bold">Amount</p>
-            <p>Name:</p>
-            <p class="fw-bold">Amount</p>
-          </div>
+          <div class="auction__bids mt-3"></div>
         </div>
         <div class="auction__description-section">
           <h2>Description</h2>
-          <p class="description__p">Here</p>
+          <p class="description__p"></p>
         </div>
       </section>
     </div>

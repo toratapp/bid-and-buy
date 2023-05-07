@@ -13,7 +13,7 @@ const media = document.querySelector("#media");
 const endsAt = document.querySelector("#ends-at");
 const messageContainer = document.querySelector(".create-listing__message-container");
 
-const todaysDate = new Date().toJSON().slice(0, 16);
+const todaysDate = new Date().toJSON().substring(0, 16);
 endsAt.setAttribute("min", todaysDate);
 
 createListingForm.addEventListener("submit", submitCreateListingForm);

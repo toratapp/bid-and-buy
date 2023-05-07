@@ -1,10 +1,10 @@
-import { corsEnabledUrl } from "./constants/api.js";
+import { baseUrl, corsEnabledUrl } from "./constants/api.js";
 import displayMessage from "./components/displayMessage.js";
 import createMenu from "./components/createMenu.js";
 
 createMenu();
 
-const featuredAuctionsUrl = corsEnabledUrl + "listings?_active=true&limit=12&_tag=wine";
+const featuredAuctionsUrl = baseUrl + "listings?_active=true&limit=12&_tag=wine";
 const loader = document.querySelector(".loader");
 const auctionsContainer = document.querySelector(".auction-cards");
 

@@ -43,9 +43,12 @@
 }
 
 .auction__bids {
-  grid-template-columns: 1fr 1fr;
   margin-bottom: 30px;
   max-width: 450px;
+}
+
+.auction__bids p {
+  margin-right: 20px;
 }
 
 .auction__description-section p {

@@ -161,6 +161,17 @@ nav input {
   font-size: 1.3rem;
 }
 
+.cta:hover {
+  background-color: $orange-400;
+  border: 3px solid $blue-400;
+  text-decoration: underline;
+}
+
+.btn:hover {
+  text-decoration: underline;
+  background-color: $blue-900 !important;
+}
+
 .error {
   color: #D82C00;
   margin: 5px 0;
