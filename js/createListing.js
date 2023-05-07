@@ -74,20 +74,8 @@ async function createListing(title, description, tags, media, time) {
     if (json.error) {
       displayMessage("error", "An error occured", ".create-listing__message-container");
     }
-
-    console.log(json);
   }
   catch(error) {
-    console.log(error);
     displayMessage("error", "An error occured", ".create-listing__message-container");
   }
 }
-
-
-// endsAt.addEventListener("change", consoleLogValue);
-// const endsAtValue = endsAt.value.trim();
-// let endsAtDate = new Date(endsAtValue).toJSON();
-
-// function consoleLogValue() {
-//   console.log(endsAtDate);
-// }

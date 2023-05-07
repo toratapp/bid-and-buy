@@ -108,6 +108,7 @@ nav input {
   background-color: #ffffff;
   margin-bottom: 40px;
   font-size: 0.9rem;
+  text-align: right;
 }
 
 #account-info-container p {
@@ -168,6 +169,22 @@ nav input {
 .success {
   color: #017B32;
   margin: 5px 0;
+}
+
+.loader {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 10px solid transparent;
+  border-top-color: $orange-600;
+  border-radius: 50%;
+  animation: spinning 1.5s linear infinite;
+}
+
+@keyframes spinning {
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 footer {

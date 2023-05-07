@@ -8,6 +8,12 @@
   gap: 25px;
 }
 
+.auction__thumbnails img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  max-height: 100px;
+}
+
 .auction__details-section {
   margin-top: 30px;
 }

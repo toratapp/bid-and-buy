@@ -53,12 +53,10 @@ async function doLogin(loginEmail, loginPassword) {
     }
 
     if(loginJson.error) {
-      console.log(error);
       return displayMessage("error", "Incorrect email og password", ".login__message-container");
     }
   }
   catch(error) {
-    console.log(error);
     return displayMessage("error", "Invalid email or password", ".login__message-container");
   }
 }

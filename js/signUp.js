@@ -56,7 +56,6 @@ async function doSignUp(signUpName, signUpEmail, signUpPassword, avatar) {
     }
   }
   catch(error) {
-    console.log(error);
     return displayMessage("error", "Please fill out all of the fields", ".sign-up__message-container");
   }
 }

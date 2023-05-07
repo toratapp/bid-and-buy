@@ -45,7 +45,7 @@ export default async function createMenu() {
                                       <li class="nav-item nav-border-button p-2 mb-3">
                                         <a class="nav-link text-white" href="#">Buy it now</a>
                                       </li>
-                                      <li class="${pathname === "/create-listing.html" ? "nav-item nav-border-button p-2 mb-3 active" : "nav-item nav-border-button p-2 mb-3"}">
+                                      <li class="${pathname === "/create-listing.html" ? "nav__create-listing nav-item nav-border-button p-2 mb-3 active" : "nav__create-listing nav-item nav-border-button p-2 mb-3"}">
                                         <a class="nav-link text-white" href="create-listing.html"
                                           >Sell</a
                                         >
@@ -99,7 +99,7 @@ export default async function createMenu() {
                                     <li class="nav-item nav-border-button px-2 me-5 my-1">
                                       <a class="nav-link text-white" href="#">Buy it now</a>
                                     </li>
-                                    <li class="${pathname === "/create-listing.html" ? "nav-item nav-border-button px-2 my-1 active" : "nav-item nav-border-button px-2 my-1"}">
+                                    <li class="${pathname === "/create-listing.html" ? "nav__create-listing nav-item nav-border-button px-2 my-1 active" : "nav__create-listing nav-item nav-border-button px-2 my-1"}">
                                       <a class="nav-link text-white" href="create-listing.html"
                                         >Sell</a
                                       >
@@ -137,8 +137,17 @@ export default async function createMenu() {
 
   const userName = getUserName();
   const accountInfoContainer = document.querySelector("#account-info-container");
+  const createListingButtons = document.querySelectorAll(".nav__create-listing");
 
-  if(!userName || userName === [] || userName.length === 0) {
+  createListingButtons.forEach((button) => {
+    if (!userName || userName === [] || userName.length === 0) {
+      button.classList.add("d-none");
+    } else {
+      button.classList.remove("d-none");
+    }
+  });
+
+  if (!userName || userName === [] || userName.length === 0) {
     return accountInfoContainer.style.display = "none";
   } else {
     const creditAmount = await getCreditAmount();

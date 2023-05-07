@@ -19,6 +19,12 @@
   }
 }
 
+@media (min-width: 768px) {
+  .auction-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (min-width: 992px) {
   #account-info-container {
     top: 175px;

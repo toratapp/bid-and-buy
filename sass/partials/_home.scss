@@ -6,11 +6,29 @@
 
 .auction-cards {
   gap: 50px;
+  grid-template-columns: 1fr;
+}
+
+.auction-cards a {
+  text-decoration: none;
 }
 
 .auction-card {
-  padding-top: 10px;
+  padding: 10px 10px 0 10px;
   border-bottom: 2px solid $orange-400;
   border-right: 2px solid $orange-400;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.15);
+}
+
+.auction-card h2:hover {
+ text-decoration: underline;
+}
+
+.auction-card p {
+  color: #000000 !important;
+}
+
+.auction-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }

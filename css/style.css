@@ -120,6 +120,7 @@ nav input {
   background-color: #ffffff;
   margin-bottom: 40px;
   font-size: 0.9rem;
+  text-align: right;
 }
 
 #account-info-container p {
@@ -180,6 +181,21 @@ nav input {
   margin: 5px 0;
 }
 
+.loader {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 10px solid transparent;
+  border-top-color: #F88125;
+  border-radius: 50%;
+  animation: spinning 1.5s linear infinite;
+}
+
+@keyframes spinning {
+  to {
+    transform: rotate(1turn);
+  }
+}
 footer {
   border-top: 4px solid #2C599D;
 }
@@ -12253,13 +12269,32 @@ header .btn {
 
 .auction-cards {
   gap: 50px;
+  grid-template-columns: 1fr;
+}
+
+.auction-cards a {
+  text-decoration: none;
 }
 
 .auction-card {
-  padding-top: 10px;
+  padding: 10px 10px 0 10px;
   border-bottom: 2px solid #FFA64D;
   border-right: 2px solid #FFA64D;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.15);
+}
+
+.auction-card h2:hover, .auction-card .h2:hover {
+  text-decoration: underline;
+}
+
+.auction-card p {
+  color: #000000 !important;
+}
+
+.auction-card img {
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .login__form-section {
@@ -12302,6 +12337,13 @@ header .btn {
 .auction__thumbnails {
   margin-top: 25px;
   gap: 25px;
+}
+
+.auction__thumbnails img {
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 100px;
 }
 
 .auction__details-section {
@@ -12348,6 +12390,10 @@ header .btn {
   max-width: 500px;
 }
 
+.current-avatar-container {
+  max-width: 150px;
+}
+
 @media (min-width: 400px) {
   .footer-wrapper {
     width: 320px;
@@ -12363,6 +12409,11 @@ header .btn {
   #account-info-container {
     top: 105px;
     bottom: auto;
+  }
+}
+@media (min-width: 768px) {
+  .auction-cards {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 992px) {
